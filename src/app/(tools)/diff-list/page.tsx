@@ -6,6 +6,7 @@ import { Button, Checkbox } from "@nextui-org/react";
 import { useToggle } from "@/hook/useToggle";
 import { SortSelect } from "@/component/SortSelect";
 import { SortValue } from "@/constants/enums";
+import { HeaderTool } from "@/component/seccion/HeaderTool";
 
 function compareStrings(
   _inputA: string,
@@ -125,14 +126,14 @@ export default function DiffList() {
   );
 
   return (
-    <main className="px-8 py-6 md:px-24 py-20">
-      <h2 className={`text-2xl font-semibold`}>Diff List</h2>
-      <p className={`mb-8 text-sm opacity-50`}>
-        The tool is by default case-insensitive, meaning it treats all items as
+    <>
+      <HeaderTool
+        pageTitle="Diff List"
+        pageDescription="The tool is by default case-insensitive, meaning it treats all items as
         if they are in lowercase. Before performing any operations, duplicate
         entries are removed from each list, leading and trailing spaces are
-        removed, and all lists are sorted alphabetically.
-      </p>
+        removed, and all lists are sorted alphabetically."
+      />
 
       <div className="container">
         <div className="columns-1 md:columns-2">
@@ -238,6 +239,6 @@ export default function DiffList() {
           </div>
         </>
       )}
-    </main>
+    </>
   );
 }

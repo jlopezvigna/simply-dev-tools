@@ -2,6 +2,7 @@
 
 import { Clipboard } from "@/component/Clipboard";
 import { LoremSelect } from "@/component/LoremSelect";
+import { HeaderTool } from "@/component/seccion/HeaderTool";
 import { LoremIpsumValues } from "@/constants/enums";
 import { useIsMounted } from "@/hook/useToggle copy";
 import { Input } from "@nextui-org/input";
@@ -52,17 +53,16 @@ export default function GenerateLoremIpsum() {
   }, [count, type]);
 
   return (
-    <main className="px-8 py-6 md:px-24 py-20">
-      <h2 className={`text-2xl font-semibold`}>Generate Lorem Ipsum</h2>
-      <p className={`mb-8 text-sm opacity-50`}>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+    <>
+      <HeaderTool
+        pageTitle="Generate Lorem Ipsum"
+        pageDescription="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
         veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
         commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-        mollit anim id est laborum.
-      </p>
+        velit esse cillum dolore eu fugiat nulla pariatur"
+      />
+
       <div className="flex gap-3 items-center">
         <Input
           type="number"
@@ -87,6 +87,6 @@ export default function GenerateLoremIpsum() {
           }}
         ></div>
       )}
-    </main>
+    </>
   );
 }

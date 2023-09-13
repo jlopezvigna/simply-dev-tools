@@ -8,6 +8,7 @@ import { SortSelect } from "@/component/SortSelect";
 import { SortValue } from "@/constants/enums";
 import { encode } from "punycode";
 import { Clipboard } from "@/component/Clipboard";
+import { HeaderTool } from "@/component/seccion/HeaderTool";
 
 const _decode = (str: string): string => {
   return Buffer.from(str, "base64").toString("utf8");
@@ -33,17 +34,17 @@ export default function Base64() {
   }, [input, setToogle]);
 
   return (
-    <main className="px-8 py-6 md:px-24 py-20">
-      <h2 className={`text-2xl font-semibold`}>Base 64 Encode / Decode</h2>
-      <p className={`mb-8 text-sm opacity-50`}>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+    <>
+      <HeaderTool
+        pageTitle="Base 64 Encode / Decode"
+        pageDescription="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
         veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
         commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
         velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
         occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-        mollit anim id est laborum.
-      </p>
+        mollit anim id est laborum."
+      />
 
       <div className="container mb-3">
         <div className="columns-1">
@@ -82,6 +83,6 @@ export default function Base64() {
           />
         </div>
       )}
-    </main>
+    </>
   );
 }
