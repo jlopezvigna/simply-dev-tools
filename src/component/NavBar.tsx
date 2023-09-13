@@ -11,6 +11,7 @@ import { SearchIcon } from "./icons/SearchIcon";
 import { DailyToolsIcon } from "./icons/daily-tools-icon";
 import { AppRoute } from "@/AppRoute";
 import Link from "next/link";
+import { Feedback } from "./Feedback";
 
 export default function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -41,7 +42,8 @@ export default function NavBar() {
       </NavbarContent>
 
       <NavbarContent as="div" className="items-center" justify="end">
-        <Input
+        <Feedback />
+        {/* <Input
           classNames={{
             base: "max-w-full sm:max-w-[10rem] h-10",
             mainWrapper: "h-full",
@@ -54,7 +56,7 @@ export default function NavBar() {
           fullWidth
           startContent={<SearchIcon size={18} />}
           type="search"
-        />
+        /> */}
       </NavbarContent>
     </NextNavBar>
   );
