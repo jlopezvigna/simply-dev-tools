@@ -5,7 +5,7 @@ import { TextIcon } from "@/component/icons/text-icon";
 import { UrlIcon } from "@/component/icons/url-icon";
 import { WhatsappIcon } from "@/component/icons/whatsapp-icon";
 import { HeaderTool } from "@/component/seccion/HeaderTool";
-import { Tab, Tabs } from "@nextui-org/react";
+import { Tab, Tabs, Tooltip } from "@nextui-org/react";
 import { QRCodeSVG } from "qrcode.react";
 import { useCallback, useState } from "react";
 import { EmailForm, EmailFormValues } from "./EmailForm";
@@ -64,20 +64,22 @@ export default function QRCodeGenerator() {
       />
 
       <div className="flex flex-wrap gap-8">
-        <div className="">
+        <div className="grow sm:grow-0">
           <Tabs
             color="primary"
             size="md"
             aria-label="Tabs QR Codes"
             selectedKey={selected}
             onSelectionChange={changeTab}
+            fullWidth
           >
             <Tab
               key="url"
               title={
                 <div className="flex items-center space-x-2">
                   <UrlIcon />
-                  <span>URL</span>
+
+                  <span className="hidden sm:block">URL</span>
                 </div>
               }
             >
@@ -88,7 +90,8 @@ export default function QRCodeGenerator() {
               title={
                 <div className="flex items-center space-x-2">
                   <EmailIcon />
-                  <span>Email</span>
+
+                  <span className="hidden sm:block">Email</span>
                 </div>
               }
             >
@@ -99,7 +102,8 @@ export default function QRCodeGenerator() {
               title={
                 <div className="flex items-center space-x-2">
                   <WhatsappIcon />
-                  <span>Whatsapp</span>
+
+                  <span className="hidden sm:block">Whatsapp</span>
                 </div>
               }
             >
@@ -110,7 +114,8 @@ export default function QRCodeGenerator() {
               title={
                 <div className="flex items-center space-x-2">
                   <TextIcon />
-                  <span>Text</span>
+
+                  <span className="hidden sm:block">Text</span>
                 </div>
               }
             >
