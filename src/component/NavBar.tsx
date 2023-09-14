@@ -21,42 +21,15 @@ export default function NavBar() {
       isMenuOpen={isMenuOpen}
       onMenuOpenChange={setIsMenuOpen}
     >
-      <NavbarContent className="sm:hidden" justify="start">
-        <NavbarMenuToggle
-          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-        />
-      </NavbarContent>
-
-      <NavbarContent className="sm:hidden pr-3" justify="center">
+      <NavbarContent className="pr-3" justify="center">
         <NavbarBrand as={Link} href={AppRoute.ROOT}>
           <DailyToolsIcon />
           <p className="font-bold text-inherit">NAME</p>
         </NavbarBrand>
       </NavbarContent>
 
-      <NavbarContent className="hidden sm:flex" justify="start">
-        <NavbarBrand className="mr-4" as={Link} href={AppRoute.ROOT}>
-          <DailyToolsIcon />
-          <p className="hidden sm:block font-bold text-inherit">NAME</p>
-        </NavbarBrand>
-      </NavbarContent>
-
       <NavbarContent as="div" className="items-center" justify="end">
         <Feedback />
-        {/* <Input
-          classNames={{
-            base: "max-w-full sm:max-w-[10rem] h-10",
-            mainWrapper: "h-full",
-            input: "text-small",
-            inputWrapper:
-              "h-full font-normal text-default-500 bg-default-400/20 dark:bg-default-500/20",
-          }}
-          placeholder="Type to search..."
-          size="sm"
-          fullWidth
-          startContent={<SearchIcon size={18} />}
-          type="search"
-        /> */}
       </NavbarContent>
     </NextNavBar>
   );
