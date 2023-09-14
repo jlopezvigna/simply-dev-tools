@@ -7,7 +7,7 @@ import {
   Input,
   NavbarMenuToggle,
 } from "@nextui-org/react";
-import { SearchIcon } from "./icons/SearchIcon";
+import { SearchIcon } from "./icons/search-icon";
 import { DailyToolsIcon } from "./icons/daily-tools-icon";
 import { AppRoute } from "@/AppRoute";
 import Link from "next/link";

@@ -16,8 +16,13 @@ const TOOLS: IBoxTool[] = [
   {
     label: "Lorem Ipsum Generator",
     description:
-      "Generate Lorem Ipsum placeholder text. Select the number of characters, words, sentences or paragraphs",
+      "Generate Lorem Ipsum placeholder text select the number of characters.",
     href: AppRoute.LOREM_IPSUM,
+  },
+  {
+    label: "QR Code Generator",
+    description: "Generate Lorem Ipsum placeholder text.",
+    href: AppRoute.QR,
   },
   {
     label: "Credit Card Generator",

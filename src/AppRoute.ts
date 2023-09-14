@@ -4,4 +4,5 @@ export enum AppRoute {
   CREDIT_CARD_GENERATOR = "/credit-card-generator",
   BASE64 = "/base64-encode-decode",
   LOREM_IPSUM = "/generate-lorem-ipsum",
+  QR = "qrcode-generator",
 }
