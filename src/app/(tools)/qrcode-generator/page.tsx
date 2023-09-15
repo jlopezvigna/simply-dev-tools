@@ -1,12 +1,13 @@
 "use client";
 
+import { DownloadIcon } from "@/component/icons/download-icon";
 import { EmailIcon } from "@/component/icons/email-icon";
 import { TextIcon } from "@/component/icons/text-icon";
 import { UrlIcon } from "@/component/icons/url-icon";
 import { WhatsappIcon } from "@/component/icons/whatsapp-icon";
 import { HeaderTool } from "@/component/seccion/HeaderTool";
-import { Tab, Tabs, Tooltip } from "@nextui-org/react";
-import { QRCodeSVG } from "qrcode.react";
+import { Button, Tab, Tabs, Tooltip } from "@nextui-org/react";
+import { QRCodeCanvas, QRCodeSVG } from "qrcode.react";
 import { useCallback, useState } from "react";
 import { EmailForm, EmailFormValues } from "./EmailForm";
 import { TextForm, TextFormValues } from "./TextForm";
@@ -22,8 +23,9 @@ export default function QRCodeGenerator() {
   const changeTab = useCallback(
     (value: any) => {
       setSelected(value as QrTabs);
+      setQrValue("");
     },
-    [setSelected]
+    [setSelected, setQrValue]
   );
 
   const handleUrl = (value: UrlFormValues) => {
@@ -48,6 +50,20 @@ export default function QRCodeGenerator() {
 
   const handleText = (value: TextFormValues) => {
     setQrValue(value.message);
+  };
+
+  const downloadQR = () => {
+    const canvas: any = document.querySelector(".qrcode-container > canvas");
+
+    const pngUrl = canvas
+      .toDataURL("image/png")
+      .replace("image/png", "image/octet-stream");
+    let downloadLink = document.createElement("a");
+    downloadLink.href = pngUrl;
+    downloadLink.download = "qr-code.png";
+    document.body.appendChild(downloadLink);
+    downloadLink.click();
+    document.body.removeChild(downloadLink);
   };
 
   return (
@@ -123,15 +139,27 @@ export default function QRCodeGenerator() {
             </Tab>
           </Tabs>
         </div>
-        <div className="flex justify-center">
-          <QRCodeSVG
-            value={qrValue}
-            size={200}
-            bgColor={"#ffffff"}
-            fgColor={"#000000"}
-            level={"L"}
-          />
-        </div>
+        {qrValue !== "" && (
+          <>
+            <div className="qrcode-container flex justify-center items-start grow md:grow-0">
+              <QRCodeCanvas
+                id="qr-code"
+                value={qrValue}
+                size={200}
+                bgColor={"#ffffff"}
+                fgColor={"#000000"}
+                level={"L"}
+              />
+            </div>
+            <Button
+              startContent={<DownloadIcon />}
+              color="primary"
+              onClick={downloadQR}
+            >
+              Download
+            </Button>
+          </>
+        )}
       </div>
     </>
   );

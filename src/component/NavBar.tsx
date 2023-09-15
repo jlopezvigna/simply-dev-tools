@@ -1,17 +1,14 @@
 "use client";
-import React from "react";
+import { AppRoute } from "@/AppRoute";
 import {
   Navbar as NextNavBar,
   NavbarBrand,
   NavbarContent,
-  Input,
-  NavbarMenuToggle,
 } from "@nextui-org/react";
-import { SearchIcon } from "./icons/search-icon";
-import { DailyToolsIcon } from "./icons/daily-tools-icon";
-import { AppRoute } from "@/AppRoute";
 import Link from "next/link";
+import React from "react";
 import { Feedback } from "./Feedback";
+import { DailyToolsIcon } from "./icons/daily-tools-icon";
 
 export default function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);

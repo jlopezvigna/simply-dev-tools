@@ -25,7 +25,7 @@ export const WhatsappForm: React.FC<Props> = ({ onSubmit }) => {
       validationSchema={schema}
       onSubmit={onSubmit}
     >
-      {({ errors, touched }) => (
+      {({ errors, touched, dirty }) => (
         <Form>
           <Field
             as={Input}
@@ -54,7 +54,12 @@ export const WhatsappForm: React.FC<Props> = ({ onSubmit }) => {
             }
           />
 
-          <Button color="primary" type="submit" className="mt-4">
+          <Button
+            color="primary"
+            type="submit"
+            className="mt-4"
+            isDisabled={!dirty}
+          >
             Generate QR Code
           </Button>
         </Form>
