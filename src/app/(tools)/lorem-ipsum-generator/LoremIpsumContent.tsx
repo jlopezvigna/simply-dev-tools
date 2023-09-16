@@ -2,13 +2,12 @@
 
 import { Clipboard } from "@/component/Clipboard";
 import { LoremSelect } from "@/component/LoremSelect";
-import { HeaderTool } from "@/component/seccion/HeaderTool";
 import { LoremIpsumValues } from "@/constants/enums";
-import { useIsMounted } from "@/hook/useToggle copy";
+import { useIsMounted } from "@/hook/useIsMounted";
 import { Input } from "@nextui-org/input";
 import { Divider } from "@nextui-org/react";
 import { loremIpsum } from "lorem-ipsum";
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useMemo, useState } from "react";
 
 const LOREM_IPSUM_NUMBER = "5";
 
@@ -22,7 +21,7 @@ function removeTags(str: string) {
   return str.replace(/(<([^>]+)>)/gi, "");
 }
 
-export default function GenerateLoremIpsum() {
+export default function LoremIpsumContent() {
   const isMounted = useIsMounted();
   const [count, setCount] = useState<string>(LOREM_IPSUM_NUMBER);
   const [type, setType] = useState<Set<LoremIpsumValues>>(
@@ -54,15 +53,6 @@ export default function GenerateLoremIpsum() {
 
   return (
     <>
-      <HeaderTool
-        pageTitle="Generate Lorem Ipsum"
-        pageDescription="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur"
-      />
-
       <div className="flex gap-3 items-center">
         <Input
           type="number"

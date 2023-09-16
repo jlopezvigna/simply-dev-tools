@@ -1,42 +1,12 @@
-import { AppRoute } from "@/AppRoute";
-import { BoxTool, IBoxTool } from "@/component/BoxTool";
-
-const TOOLS: IBoxTool[] = [
-  {
-    label: "Diff List",
-    description: "Check differences between two list.",
-    href: AppRoute.DIFFLIST,
-  },
-  {
-    label: "Base64 Convert",
-    description:
-      "Base64 is an encoding that converts binary data to text and vice versa.",
-    href: AppRoute.BASE64,
-  },
-  {
-    label: "Lorem Ipsum Generator",
-    description:
-      "Generate Lorem Ipsum placeholder text select the number of characters.",
-    href: AppRoute.LOREM_IPSUM,
-  },
-  {
-    label: "QR Code Generator",
-    description: "Generate Lorem Ipsum placeholder text.",
-    href: AppRoute.QR,
-  },
-  {
-    label: "Credit Card Generator",
-    description: "Credit Card Mocks in JSON, XML.",
-    href: AppRoute.CREDIT_CARD_GENERATOR,
-  },
-];
+import { Box } from "@/component/Box";
+import { tools } from "@/constants";
 
 export default function Home() {
   return (
     <main className="flex flex-col items-center justify-between">
       <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        {TOOLS.map((tool) => (
-          <BoxTool
+        {tools.map((tool) => (
+          <Box
             key={tool.label}
             label={tool.label}
             description={tool.description}

@@ -1,12 +1,11 @@
 "use client";
 
-import { ChangeEventHandler, useCallback, useState } from "react";
-import { Textarea } from "@nextui-org/input";
-import { Button, Checkbox } from "@nextui-org/react";
-import { useToggle } from "@/hook/useToggle";
 import { SortSelect } from "@/component/SortSelect";
 import { SortValue } from "@/constants/enums";
-import { HeaderTool } from "@/component/seccion/HeaderTool";
+import { useToggle } from "@/hook/useToggle";
+import { Textarea } from "@nextui-org/input";
+import { Button, Checkbox } from "@nextui-org/react";
+import { useCallback, useState } from "react";
 
 function compareStrings(
   _inputA: string,
@@ -69,7 +68,7 @@ function compareStrings(
   };
 }
 
-export default function DiffList() {
+export default function DiffListContent() {
   const [showResult, toggle, setToogle] = useToggle();
   const [caseInsensitive, toggleCaseInsensitive] = useToggle(true);
   const [ignoreDuplicates, toggleIgnoreDuplicates] = useToggle(true);
@@ -127,14 +126,6 @@ export default function DiffList() {
 
   return (
     <>
-      <HeaderTool
-        pageTitle="Diff List"
-        pageDescription="The tool is by default case-insensitive, meaning it treats all items as
-        if they are in lowercase. Before performing any operations, duplicate
-        entries are removed from each list, leading and trailing spaces are
-        removed, and all lists are sorted alphabetically."
-      />
-
       <div className="container">
         <div className="columns-1 md:columns-2">
           <div className="w-full mb-5 md:m-0">
