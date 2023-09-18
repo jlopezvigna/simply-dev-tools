@@ -1,6 +1,8 @@
 "use client";
 
 import { AppRoute } from "@/AppRoute";
+import { breakpoints } from "@/constants";
+import useBreakpoint from "@/hook/useBreakPoint";
 import {
   Navbar as NextNavBar,
   NavbarBrand,
@@ -11,6 +13,8 @@ import { BugButton } from "./BugButton";
 import { ImprovementButton } from "./ImprovementButton";
 
 export default function NavBar() {
+  const breakpoint = useBreakpoint();
+
   return (
     <NextNavBar maxWidth="xl" className="bg-transparent">
       <NavbarContent className="pr-3" justify="center">
@@ -27,8 +31,8 @@ export default function NavBar() {
       </NavbarContent>
 
       <NavbarContent as="div" className="items-center" justify="end">
-        <ImprovementButton size="sm" />
-        <BugButton size="sm" />
+        <ImprovementButton isIconOnly={breakpoint === "xs"} size="sm" />
+        <BugButton isIconOnly={breakpoint === "xs"} size="sm" />
       </NavbarContent>
     </NextNavBar>
   );

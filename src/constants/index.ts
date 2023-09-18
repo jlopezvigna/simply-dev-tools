@@ -26,6 +26,14 @@ export const SORT: ISortSelect[] = [
   { label: SortLabel.Za, value: SortValue.Za },
 ];
 
+export const breakpoints = {
+  0: "xs",
+  600: "sm",
+  960: "md",
+  1280: "lg",
+  1920: "xl",
+};
+
 export const LOREM_IPSUM: ISelect[] = [
   { label: "Paragraphs", value: "paragraphs" },
   { label: "Sentences", value: "sentences" },
