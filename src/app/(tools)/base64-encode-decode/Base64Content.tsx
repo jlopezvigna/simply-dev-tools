@@ -62,11 +62,11 @@ export default function Base64Content() {
 
       {showResult && (
         <div className="flex gap-3">
-          <Textarea fullWidth color="success" readOnly value={output} />
+          <Textarea fullWidth color="primary" readOnly value={output} />
           <Clipboard
             className="mt-1.5"
             toCopie={output}
-            color="success"
+            color="primary"
             size="lg"
           />
         </div>

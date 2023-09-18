@@ -15,7 +15,7 @@ export const Clipboard: React.FC<IClipboard> = ({ toCopie = "", ...rest }) => {
   }, [copy, toCopie]);
 
   return (
-    <Tooltip content="Copy to clipboard" color="foreground" showArrow>
+    <Tooltip content="Copy to Clipboard">
       <Button
         isIconOnly
         aria-label="copy content"
