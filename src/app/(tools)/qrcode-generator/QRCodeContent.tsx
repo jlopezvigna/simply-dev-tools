@@ -131,7 +131,7 @@ export default function QRCodeContent() {
         </div>
         {qrValue !== "" && (
           <>
-            <div className="qrcode-container flex justify-center items-start grow md:grow-0">
+            <div className="qrcode-container flex flex-col justify-center items-center grow md:grow-0 md:itams-start">
               <QRCodeCanvas
                 id="qr-code"
                 value={qrValue}
@@ -140,15 +140,17 @@ export default function QRCodeContent() {
                 fgColor={"#000000"}
                 level={"L"}
               />
+              <Button
+                startContent={<DownloadIcon />}
+                color="primary"
+                variant="flat"
+                size="sm"
+                className="mt-6"
+                onClick={downloadQR}
+              >
+                Download
+              </Button>
             </div>
-            <Button
-              startContent={<DownloadIcon />}
-              color="primary"
-              variant="flat"
-              onClick={downloadQR}
-            >
-              Download
-            </Button>
           </>
         )}
       </div>
