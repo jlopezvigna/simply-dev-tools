@@ -3,7 +3,7 @@ import { Metadata } from "next";
 import LoremIpsumContent from "./LoremIpsumContent";
 
 export const metadata: Metadata = {
-  title: "Lorem Ipsum Generator Online - SimplyDevTools",
+  title: "Lorem Ipsum Generator - Online | SimplyDevTools",
   description: "Free Lorem Ipsum Generator - Create Customizable Dummy Text",
   keywords:
     "Lorem Ipsum Generator, Dummy Text Generator, Generate Lorem Ipsum, Lorem Ipsum Text, Lorem Ipsum Paragraphs, Lorem Ipsum Sentences, Customizable Dummy Text, Lorem Ipsum Online Tool",
