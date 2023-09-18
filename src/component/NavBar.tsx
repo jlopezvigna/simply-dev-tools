@@ -1,7 +1,7 @@
 "use client";
 
 import { AppRoute } from "@/AppRoute";
-import { useBreakpoint } from "@/hook/useBreakPoint";
+import { useBreakpoint } from "@/hook/useBreakpoint";
 import {
   Navbar as NextNavBar,
   NavbarBrand,
