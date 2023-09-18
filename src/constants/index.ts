@@ -1,5 +1,5 @@
 import { AppRoute } from "@/AppRoute";
-import { IBoxTool } from "@/component/Box";
+import { IBoxTool } from "@/component/Card";
 import { SortLabel, SortValue } from "./enums";
 
 interface ISortSelect {
@@ -10,6 +10,14 @@ interface ISortSelect {
 interface ISelect {
   label: any;
   value: any;
+}
+
+export interface IconProps {
+  size?: number;
+  strokeWidth?: number;
+  width?: number;
+  height?: number;
+  className?: string;
 }
 
 export const SORT: ISortSelect[] = [
@@ -53,5 +61,10 @@ export const tools: IBoxTool[] = [
     description:
       "Generate strong and customizable passwords with options for length, uppercase, lowercase, symbols, and numbers.",
     href: AppRoute.PASSWORD,
+  },
+  {
+    label: "More tools Comming Soon",
+    description: "",
+    href: AppRoute.ROOT,
   },
 ];

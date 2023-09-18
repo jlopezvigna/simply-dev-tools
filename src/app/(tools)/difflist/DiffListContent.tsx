@@ -224,7 +224,12 @@ export default function DiffListContent() {
                 />
               </div>
             </div>
-            <Button className="mt-4" onClick={reset}>
+            <Button
+              className="mt-4"
+              onClick={reset}
+              color="primary"
+              variant="flat"
+            >
               Reset
             </Button>
           </div>

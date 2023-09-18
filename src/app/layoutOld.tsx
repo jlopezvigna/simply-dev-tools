@@ -14,28 +14,25 @@ export const metadata: Metadata = {
     "Explore a collection of daily developer tools at SimplyDevTools.com. Encode and decode Base64, generate Lorem Ipsum text, URL encode/decode, create QR codes, and generate secure passwords effortlessly. Simplify your development tasks with our free online tools.",
   keywords:
     "developer tools, Base64 encode, Base64 decode, Lorem Ipsum generator, URL encoding, URL decoding, QR code generator, password generator, web development, coding tools, SimplyDevTools",
-  icons: {
-    icon: "/favicon.ico",
-  },
 };
 
-export default function RootLayout({
+export default function RootLayoutOld({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
     <html lang="en" className="light">
-      <head>
-        <link rel="icon" href="/favicon.ico" />
-      </head>
       <GoogleAnalytics
         GA_MEASUREMENT_ID={process.env.NEXT_GA_MEASUREMENT_ID as string}
       />
 
-      <body className={inter.className}>
+      <body>
         <Providers>
-          <div className="min-h-screen">{children}</div>
+          <div className="min-h-screen">
+            <NavBar />
+            <div className="px-8 py-6 md:px-24 py-20">{children}</div>
+          </div>
         </Providers>
         <CookieBanner />
       </body>

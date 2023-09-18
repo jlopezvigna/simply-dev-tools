@@ -7,7 +7,7 @@ export interface IBoxTool {
   href: string;
 }
 
-export const Box: React.FC<IBoxTool> = ({ label, description, href }) => {
+export const Card: React.FC<IBoxTool> = ({ label, description, href }) => {
   return (
     <Link
       href={href}

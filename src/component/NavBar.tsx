@@ -7,22 +7,28 @@ import {
   NavbarContent,
 } from "@nextui-org/react";
 import Link from "next/link";
-import { Feedback } from "./Feedback";
-import { DailyToolsIcon } from "./icons/daily-tools-icon";
+import { BugButton } from "./BugButton";
+import { ImprovementButton } from "./ImprovementButton";
 
 export default function NavBar() {
   return (
-    <NextNavBar isBordered>
+    <NextNavBar maxWidth="xl" className="bg-transparent">
       <NavbarContent className="pr-3" justify="center">
         <NavbarBrand as={Link} href={AppRoute.ROOT}>
-          <DailyToolsIcon />
-
-          <p className="font-bold text-inherit">Simply Dev Tools</p>
+          <h3
+            aria-label="Simply Dev Tools"
+            className="text-xl flex flex-row items-center font-extrabold gap-x-0.5 justify-center text-neutral-900"
+          >
+            <span className="simply-logo">Simply</span>
+            <span>Dev</span>
+            <span>Tools</span>
+          </h3>
         </NavbarBrand>
       </NavbarContent>
 
       <NavbarContent as="div" className="items-center" justify="end">
-        <Feedback />
+        <ImprovementButton size="sm" />
+        <BugButton size="sm" />
       </NavbarContent>
     </NextNavBar>
   );

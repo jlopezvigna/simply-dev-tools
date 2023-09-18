@@ -50,7 +50,12 @@ export default function Base64Content() {
         <Button className="m" color="primary" onClick={encode}>
           Encode
         </Button>
-        <Button className="mb-4" onClick={decode}>
+        <Button
+          className="mb-4"
+          color="primary"
+          variant="flat"
+          onClick={decode}
+        >
           Decode
         </Button>
       </div>
