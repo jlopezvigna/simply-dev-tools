@@ -11,7 +11,7 @@ export const Card: React.FC<IBoxTool> = ({ label, description, href }) => {
   return (
     <Link
       href={href}
-      className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
+      className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-primary/[.2] hover:bg-primary/[.2] hover:text-primary"
       aria-label={label}
       aria-description={description}
     >
