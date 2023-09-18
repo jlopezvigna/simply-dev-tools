@@ -5,7 +5,7 @@ import { tools } from "@/constants";
 
 export default function Home() {
   return (
-    <div className="px-8 py-10 md:px-24 md:py-20">
+    <div className="px-8 py-10 md:px-24 md:pt-20">
       <h1
         aria-label="Simply Dev Tools"
         className="text-6xl flex flex-col items-center font-extrabold gap-2 justify-center mb-10 text-neutral-900 md:flex-row text-7xl"
