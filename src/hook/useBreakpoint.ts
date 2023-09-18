@@ -1,7 +1,7 @@
 import { breakpoints } from "@/constants";
 import { useEffect, useState } from "react";
 
-const useBreakpoint = () => {
+export const useBreakpoint = () => {
   const [breakpoint, setBreakPoint] = useState("");
   const [windowSize, setWindowSize] = useState<{
     width?: number;
@@ -44,5 +44,3 @@ const useBreakpoint = () => {
   }, [windowSize.width]);
   return breakpoint;
 };
-
-export default useBreakpoint;
