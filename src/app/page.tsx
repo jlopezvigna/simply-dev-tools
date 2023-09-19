@@ -15,8 +15,8 @@ export default function Home() {
         <span>Tools</span>
       </h1>
       <h2 className="text-base text-neutral-500 max-w-4xl text-center m-auto md:text-xl lg:text-2xl">
-        Vercels frontend cloud gives developers the frameworks, workflows, and
-        infrastructure to build a faster, more personalized Web.
+        Explore a collection of daily developer tools. Simplify your development
+        tasks with our free online tools.
       </h2>
       <div className="flex flex-col gap-4 justify-center my-10 md:flex-row">
         <ImprovementButton />
