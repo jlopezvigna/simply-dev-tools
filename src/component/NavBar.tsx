@@ -7,6 +7,7 @@ import {
   NavbarBrand,
   NavbarContent,
 } from "@nextui-org/react";
+import Image from "next/image";
 import Link from "next/link";
 import { BugButton } from "./BugButton";
 import { ImprovementButton } from "./ImprovementButton";
@@ -20,11 +21,15 @@ export default function NavBar() {
         <NavbarBrand as={Link} href={AppRoute.ROOT}>
           <h3
             aria-label="Simply Dev Tools"
-            className="text-xl flex flex-row items-center font-extrabold gap-x-0.5 justify-center text-neutral-900"
+            className="flex flex-row items-center justify-center gap-x-0.5"
           >
-            <span className="simply-logo">Simply</span>
-            <span>Dev</span>
-            <span>Tools</span>
+            <Image
+              src="/simply-light.png"
+              alt="simply-logo"
+              width={90}
+              height={90}
+            />
+            <span className="simply-logo tool-page-logo">dev tools</span>
           </h3>
         </NavbarBrand>
       </NavbarContent>

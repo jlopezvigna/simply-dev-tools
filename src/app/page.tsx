@@ -2,18 +2,24 @@ import { BugButton } from "@/component/BugButton";
 import { Card } from "@/component/Card";
 import { ImprovementButton } from "@/component/ImprovementButton";
 import { tools } from "@/constants";
+import Image from "next/image";
 
 export default function Home() {
   return (
     <div className="px-8 py-10 md:px-24 md:pt-20">
       <h1
         aria-label="Simply Dev Tools"
-        className="text-6xl flex flex-col items-center font-extrabold gap-2 justify-center mb-10 text-neutral-900 md:flex-row text-7xl"
+        className="flex flex-col items-center gap-2 justify-center mb-10 md:flex-row logo-container"
       >
-        <span className="simply-logo">Simply</span>
-        <span>Dev</span>
-        <span>Tools</span>
+        <Image
+          src="/simply-light.png"
+          alt="simply logo"
+          width={300}
+          height={300}
+        />
+        <span className="simply-logo home-page-logo">dev tools</span>
       </h1>
+
       <h2 className="text-base text-neutral-500 max-w-4xl text-center m-auto md:text-xl lg:text-2xl">
         Explore a collection of daily developer tools. Simplify your development
         tasks with our free online tools.

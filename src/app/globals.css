@@ -8,17 +8,8 @@ body {
   margin: 0;
   font-family: "Inter", sans-serif;
   color: rgb(23, 23, 23);
-  /* background-color: #f0f0f0; */
-  /* background-color: #fcfcfc; */
-
-  /* background-color: #f9fcff;
-  background-image: linear-gradient(147deg, #f9fcff 0%, #dee4ea 74%); */
-
   background-color: #f5f7fa;
   background-image: linear-gradient(147deg, #f5f7fa 0%, #e3e8ee 74%);
-
-  /* background-color: #f7f8f9;
-  background-image: linear-gradient(147deg, #f7f8f9 0%, #e6e9ec 74%); */
 }
 
 * {
@@ -29,4 +20,30 @@ body {
   background: -webkit-linear-gradient(#4641a4, #c0546f);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.home-page-logo {
+  font-size: 3.5rem;
+  font-weight: 600;
+  letter-spacing: -2px;
+  margin-top: -2.5rem;
+}
+
+.tool-page-logo {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .logo-container {
+    position: relative;
+  }
+
+  .home-page-logo {
+    font-size: 2.5rem;
+    letter-spacing: -1px;
+    position: absolute;
+    bottom: -10px;
+    right: 0;
+  }
 }

@@ -1,6 +1,5 @@
 import CookieBanner from "@/component/CookieBanner";
 import GoogleAnalytics from "@/component/GoogleAnalytics";
-import NavBar from "@/component/NavBar";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
