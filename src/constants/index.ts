@@ -71,6 +71,11 @@ export const tools: IBoxTool[] = [
     href: AppRoute.PASSWORD,
   },
   {
+    label: "URL Encode - Decode",
+    description: "URL Encoder/Decoder Online.",
+    href: AppRoute.URL,
+  },
+  {
     label: "More tools Comming Soon",
     description: "",
     href: AppRoute.ROOT,

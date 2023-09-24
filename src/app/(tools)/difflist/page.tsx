@@ -3,11 +3,12 @@ import { Metadata } from "next";
 import DiffListContent from "./DiffListContent";
 
 export const metadata: Metadata = {
-  title: "Diff List - Compare two lists Online | SimplyDevTools",
+  title:
+    "SimplyDevTools Diff: Compare Text & Find Distinctions | Developer's Essential Tool",
   description:
-    "Compare two lists of names, domains, e-mails with different filters",
+    "Compare text, find differences in text lists. Paste files, click to discover distinctions. Your developer's essential tool.",
   keywords:
-    "List Comparison, Diff List Tool, List Differences, Compare Lists Online, List Comparison Tool, Find List Differences, List Diff Checker, List Comparison Online, List Comparison Utility, List Comparison Software, List Comparison Tool Free, Compare Two Lists, List Difference Finder, List Analysis Tool, List Comparison Web App, Online List Comparator, List Sorting Tool, List Filter and Sort, List Comparison Tool Features, List Comparison Examples, compare text, compare strings, compare text online, online diff",
+    "compare strings, compare text online, diff, diff tool, quick diff, quickdiff, online diff tool, diff checker, diffchecker, text diff, online diff, diff online, text compare, compare text, text compare online compare lists online, compare two lists",
 };
 
 export default function DiffListPage() {

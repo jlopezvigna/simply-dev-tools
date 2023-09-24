@@ -49,7 +49,7 @@ export default function PasswordGeneratoContent() {
           type="text"
           className="max-w-xs"
         />
-        <Clipboard toCopie={password} size="lg" />
+        <Clipboard toCopy={password} size="lg" />
       </div>
       <div className="flex gap-3 items-center flex-wrap">
         <Input

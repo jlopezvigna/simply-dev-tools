@@ -5,9 +5,9 @@ import Base64Content from "./Base64Content";
 export const metadata: Metadata = {
   title: "Base64 Encode and Decode - Online | SimplyDevTools",
   description:
-    "Free Base64 Encoder/Decoder - Convert Data to/from Base64 Format",
+    "Base64 Encoder/Decoder Online - Convert Data to/from Base64 Format",
   keywords:
-    "Base64 Encode, Base64 Decode, Data Encoding, Data Decoding, Online Base64 Tool, Base64 Encoder, Base64 Decoder, Convert to Base64, Convert from Base64",
+    "base64 encode, encode base64, base64encode, base 64 encode, base64 encoder, base64 decode, decode base64, base64decode, base 64 decode, base64 encode online, encode base64 online, base64encode online, base 64 encode online, base64 encoder online, base64 decode online, decode base64 online, base64decode online, base 64 decod online",
 };
 
 export default function Base64Page() {

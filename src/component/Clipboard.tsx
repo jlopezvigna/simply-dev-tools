@@ -4,15 +4,15 @@ import React, { useCallback } from "react";
 import { CopyIcon } from "./icons/copy-icon";
 
 interface IClipboard extends ButtonProps {
-  toCopie?: string | undefined;
+  toCopy?: string | undefined;
 }
 
-export const Clipboard: React.FC<IClipboard> = ({ toCopie = "", ...rest }) => {
+export const Clipboard: React.FC<IClipboard> = ({ toCopy = "", ...rest }) => {
   const [, copy] = useCopyToClipboard();
 
   const handleClick = useCallback(() => {
-    copy(toCopie);
-  }, [copy, toCopie]);
+    copy(toCopy);
+  }, [copy, toCopy]);
 
   return (
     <Tooltip content="Copy to Clipboard">

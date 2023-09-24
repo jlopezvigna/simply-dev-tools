@@ -6,4 +6,5 @@ export enum AppRoute {
   LOREM_IPSUM = "/lorem-ipsum-generator",
   QR = "qrcode-generator",
   PASSWORD = "password-generator",
+  URL = "url-encode-decode",
 }

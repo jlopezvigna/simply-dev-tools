@@ -8,14 +8,14 @@ import { Button, Tooltip } from "@nextui-org/react";
 import { useCallback, useState } from "react";
 
 const _decode = (str: string): string => {
-  return Buffer.from(str, "base64").toString("utf8");
+  return decodeURIComponent(str);
 };
 
 const _encode = (str: string): string => {
-  return Buffer.from(str, "utf8").toString("base64");
+  return encodeURIComponent(str);
 };
 
-export default function Base64Content() {
+export default function URLContent() {
   const [showResult, _, setToggle] = useToggle();
   const [input, setInput] = useState<string>("");
   const [output, setOutput] = useState<string>("");
@@ -44,7 +44,7 @@ export default function Base64Content() {
               fullWidth
               minRows={300}
               size="lg"
-              placeholder="Paste you text here"
+              placeholder="Paste your text here"
               value={input}
               onChange={(e) => setInput(e.target.value)}
             />

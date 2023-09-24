@@ -65,7 +65,7 @@ export default function LoremIpsumContent() {
           selectedKeys={type}
           onChange={handleType}
         />
-        <Clipboard toCopie={removeTags(output) as string} size="lg" />
+        <Clipboard toCopy={removeTags(output) as string} size="lg" />
       </div>
       <Divider className="my-6" />
 
