@@ -2,7 +2,12 @@ import React from "react";
 
 import { cn } from "@nextui-org/react";
 
-export const IconWrapper = ({ children, className }) => (
+interface Props {
+  children: React.ReactNode;
+  className: string;
+}
+
+export const IconWrapper: React.FC<Props> = ({ children, className }) => (
   <div
     className={cn(
       className,
