@@ -24,7 +24,7 @@ export const HeaderTool: React.FC<IHeaderTool> = ({
 
   return (
     <>
-      <div className="flex justify-between">
+      <div className="flex justify-between md:justify-end">
         <Button
           isIconOnly
           aria-label="Open Menu"
@@ -34,10 +34,10 @@ export const HeaderTool: React.FC<IHeaderTool> = ({
         >
           <HamburgerIcon strokeWidth={2} />
         </Button>
-        <h2 className={`text-2xl font-semibold`}>{pageTitle}</h2>
+
         <div
           className={cn(
-            "fixed top-0 left-0 right-0 h-full bg-white z-10 px-8 py-6 overflow-y-auto overflow-x-hidden",
+            "fixed top-0 left-0 right-0 h-full bg-white z-20 px-8 py-6 overflow-y-auto overflow-x-hidden",
             {
               "hidden ": !open,
             }
@@ -62,6 +62,7 @@ export const HeaderTool: React.FC<IHeaderTool> = ({
         </div>
       </div>
 
+      <h2 className={`text-2xl font-semibold mt-5`}>{pageTitle}</h2>
       <p className={`mb-8 mt-4 text-sm opacity-50`}>{pageDescription}</p>
     </>
   );
