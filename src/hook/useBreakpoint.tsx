@@ -23,20 +23,20 @@ export const useBreakpoint = () => {
     handleResize();
 
     if (windowSize.width !== undefined) {
-      if (0 < windowSize.width && windowSize.width < 600) {
+      if (0 < windowSize.width && windowSize.width < 640) {
         setBreakPoint(breakpoints[0]);
       }
-      if (600 < windowSize.width && windowSize.width < 960) {
-        setBreakPoint(breakpoints[600]);
+      if (640 < windowSize.width && windowSize.width < 768) {
+        setBreakPoint(breakpoints[640]);
       }
-      if (960 < windowSize.width && windowSize.width < 1280) {
-        setBreakPoint(breakpoints[960]);
+      if (768 < windowSize.width && windowSize.width < 1024) {
+        setBreakPoint(breakpoints[768]);
       }
-      if (1280 < windowSize.width && windowSize.width < 1920) {
-        setBreakPoint(breakpoints[1280]);
+      if (1024 < windowSize.width && windowSize.width < 1024) {
+        setBreakPoint(breakpoints[1024]);
       }
-      if (windowSize.width >= 1920) {
-        setBreakPoint(breakpoints[1920]);
+      if (windowSize.width >= 1024) {
+        setBreakPoint(breakpoints[1024]);
       }
     }
 

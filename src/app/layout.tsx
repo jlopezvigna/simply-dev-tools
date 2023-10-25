@@ -34,7 +34,9 @@ export default function RootLayout({
 
       <body className={inter.className}>
         <Providers>
-          <div className="min-h-screen">{children}</div>
+          <div className="max-h-screen overflow-y-auto overflow-x-hidden">
+            {children}
+          </div>
         </Providers>
         <CookieBanner />
       </body>
