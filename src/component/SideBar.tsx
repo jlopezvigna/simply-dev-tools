@@ -35,9 +35,9 @@ export default function SideBar() {
                     <Link
                       href={subItem.href}
                       className={cn(
-                        "relative flex flex-row items-center h-8 focus:outline-none border-transparent pr-6 text-gray-600 hover:bg-gray-50 hover:text-gray-800 border-l-4 hover:border-secondary-500",
+                        "relative flex flex-row items-center h-8 focus:outline-none border-transparent pr-6 text-gray-600 hover:bg-gray-200 hover:text-gray-800 border-l-4",
                         {
-                          "bg-gray-50 text-gray-800 font-bold border-secondary":
+                          "bg-gray-50 text-gray-800 font-bold !border-secondary":
                             pathname === subItem.href,
                         }
                       )}
